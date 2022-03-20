@@ -1,0 +1,36 @@
+<header>
+  <nav class="main__navbar" [class.scrolled]="scrollPos>10" (scroll)="scrollHandler($event)">
+    <div class="logo" (click)="toggleSidebar()">
+      <a>LOGO</a>
+    </div>
+    <div class="brand__name">
+      <a href="">NAVBAR</a>
+    </div>
+
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon">
+      <span class="menu-icon__line"></span>
+    </label>
+
+    <!-- <i class="fas fa-bars"></i> -->
+
+    <ul class="nav__links">
+      <li class="nav__link">
+        <a href="#">Projects</a>
+      </li>
+      <li class="nav__link">
+        <a href="#">Portfolio</a>
+      </li>
+      <li class="nav__link">
+        <a href="#">Services</a>
+      </li>
+      <li class="nav__link">
+        <a href="#">About</a>
+      </li>
+      <li class="nav__link">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>

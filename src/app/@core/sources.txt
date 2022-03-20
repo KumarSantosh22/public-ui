@@ -1,0 +1,7 @@
+# For bootstrap based navbar follow the link given below:
+# https://freefrontend.com/bootstrap-search-boxes/
+# https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-navbar-search-inputs-51696208
+# https://bbbootstrap.com/snippets/bootstrap-sidebar-user-profile-62301382 this is a card
+# https://bbbootstrap.com/snippets/sidebar-menu-sub-menus-and-toggle-button-27928347
+
+
