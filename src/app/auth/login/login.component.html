@@ -1,1 +1,46 @@
-<p>login works!</p>
+<div class="d-flex">
+  <div class=" flex-r container-fluid">
+    <div class="flex-r login-wrapper">
+      <div class="login-text" style="min-width: 375x;">
+        <div class="logo text-center">
+          <span><i class="fas fa-users"></i></span>
+          <span class="ms-1">PublicUI</span>
+        </div>
+        <h1>{{signInMode?'Sign In':'Sign Up'}}</h1>
+        <p *ngIf="!signInMode">It's not long before you embark on this journey! </p>
+
+        <form class="flex-c" #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <div class="input-box">
+            <span class="label">E-mail</span>
+            <div class=" flex-r input">
+              <input type="email" name="email" placeholder="name@abc.com" minlength="5" maxlength="100"
+                [(ngModel)]="model.email" required gForm>
+              <i class="fas fa-at"></i>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="label">Password</span>
+            <div class="flex-r input">
+              <input type="password" name="password" placeholder="8+ (a, A, 1, #)" minlength="8"
+                maxlength="50" [(ngModel)]="model.password" required>
+              <i class="fas fa-lock"></i>
+            </div>
+          </div>
+
+          <div class="check" *ngIf="!signInMode">
+            <input type="checkbox" class="larger-checkbox" required name="isAgree" id="" [(ngModel)]="model.isAgree">
+            <span>I've read and agree with T&C</span>
+          </div>
+
+          <input class="btn" type="submit" value="{{signInMode?'Sign In':'Create an Account'}}">
+          <span class="extra-line">
+            <span>{{signInMode?'Don\'t have an account?':'Already have an account?'}}</span>
+            <a class="link-text" (click)="changeMode()">{{signInMode?' Sign Up':' Sign In'}}</a>
+          </span>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

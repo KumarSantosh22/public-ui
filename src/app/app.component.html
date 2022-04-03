@@ -1,12 +1,12 @@
+<router-outlet *ngIf="activateAuth"></router-outlet>
 
-<router-outlet name="authentication"></router-outlet>
-
-<app-header></app-header>
-<!-- <app-navbar></app-navbar> -->
-<!-- <app-header-ecom></app-header-ecom> -->
-<!-- <app-header-ecom-two></app-header-ecom-two> -->
-<app-sidebar></app-sidebar>
-<main class="main container-fluid">
-  <router-outlet></router-outlet>
-</main>
-
+<div *ngIf="!activateAuth">
+  <app-header></app-header>
+  <!-- <app-navbar></app-navbar> -->
+  <!-- <app-header-ecom></app-header-ecom> -->
+  <!-- <app-header-ecom-two></app-header-ecom-two> -->
+  <app-sidebar></app-sidebar>
+  <main class="main container-fluid">
+    <router-outlet></router-outlet>
+  </main>
+</div>

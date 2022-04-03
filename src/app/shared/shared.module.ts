@@ -24,6 +24,9 @@ import { ClaimsDirective } from './directives/claims.directive';
     SidebarModule,
   ],
   exports: [
+    FormDirective,
+    TextDirective,
+    ClaimsDirective,
     GridComponent,
   ],
   providers: [

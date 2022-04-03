@@ -9,7 +9,10 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { FormsModule } from '@angular/forms';
+import { SignupStepsComponent } from './signup-steps/signup-steps.component';
+import { StepsModule } from 'primeng/steps';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,16 @@ import { SharedModule } from '../shared/shared.module';
     SigninComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    HomeComponent
+    HomeComponent,
+    SignupStepsComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     SharedModule,
+    FormsModule,
+    StepsModule,
+    DropdownModule,
   ]
 })
 export class AuthModule { }
