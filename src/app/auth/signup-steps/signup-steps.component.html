@@ -2,7 +2,7 @@
     <form #form="ngForm" (ngSubmit)="onSubmit(form)">
       <div class="row g-5">
         <div class="col-12">
-          <p-steps [model]="items"></p-steps>
+          <p-steps [model]="items" [activeIndex]="activeIndex"></p-steps>
         </div>
         <div class="col-6">
           <input type="text" name="firstName" placeholder="First Name" class="form-control">
@@ -14,7 +14,7 @@
           <input type="date" name="dob" placeholder="DoB" class="form-control">
         </div>
         <div class="col-6">
-          <p-dropdown [options]="genders" [(ngModel)]="model.gender" optionLabel="name" optionValue="value" ></p-dropdown>
+          <p-dropdown [options]="genders" [(ngModel)]="model.gender" optionLabel="name" optionValue="value" [ngModelOptions]="{standalone: true}"></p-dropdown>
         </div>
 
       </div>

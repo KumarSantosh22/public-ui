@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SignupStepsComponent implements OnInit {
   model: any = {};
+  activeIndex = 0;
   items = [
     { label: 'Personal Information' },
     { label: 'Other Information' },
